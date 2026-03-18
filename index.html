@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decision Tree Classifier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page">
+        <section class="card" aria-labelledby="title">
+            <header class="card-header">
+                <h1 id="title">Bank Marketing Prediction</h1>
+                <p class="subtitle">Estimate whether a customer is likely to purchase based on profile details.</p>
+            </header>
+
+            <form id="predictionForm" class="form" novalidate>
+                <div class="field">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" min="1" max="120" placeholder="e.g. 34" required>
+                </div>
+
+                <div class="field">
+                    <label for="balance">Balance</label>
+                    <input type="number" id="balance" min="0" placeholder="e.g. 6500" required>
+                </div>
+
+                <div class="field">
+                    <label for="previous">Previous Contacts</label>
+                    <input type="number" id="previous" min="0" placeholder="e.g. 2" required>
+                </div>
+
+                <div class="field">
+                    <label for="job">Job</label>
+                    <select id="job" required>
+                        <option value="admin">Admin</option>
+                        <option value="student">Student</option>
+                        <option value="unemployed">Unemployed</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="predictBtn">Predict</button>
+            </form>
+
+            <section class="result-box" aria-live="polite" aria-atomic="true">
+                <h2>Prediction Result</h2>
+                <p id="result" class="result-text">Enter details and click Predict.</p>
+            </section>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
